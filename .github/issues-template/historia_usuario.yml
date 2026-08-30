@@ -1,0 +1,84 @@
+name: "📋 História de Usuário"
+description: Nova funcionalidade a ser implementada, seguindo o backlog do produto.
+title: "[HU] "
+labels: ["história de usuário"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Preencha esta issue **antes** de começar a implementar (SDD: especificação antes do código).
+        Referencie o número da história no backlog do produto, se já existir (ex: #4.2).
+
+  - type: input
+    id: referencia-backlog
+    attributes:
+      label: Referência no Backlog
+      description: Número/ID da história no backlog do produto (ex: 4.2)
+      placeholder: "Ex: 2.3"
+    validations:
+      required: false
+
+  - type: textarea
+    id: historia
+    attributes:
+      label: História de Usuário
+      description: Formato "Como [persona], quero [ação], para [motivo]"
+      placeholder: "Como Usuário autenticado, quero..., para..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: criterios-aceite
+    attributes:
+      label: Critérios de Aceite
+      description: Lista do que precisa ser verdade para considerar a história pronta. Use checklist.
+      placeholder: |
+        - [ ] Critério 1
+        - [ ] Critério 2
+        - [ ] Critério 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: especificacao-api
+    attributes:
+      label: Especificação técnica (SDD)
+      description: Contrato da API envolvida (endpoint, método, entrada, saída) ou regra de negócio relevante, definida ANTES da implementação.
+      placeholder: |
+        Endpoint: POST /api/relatos/
+        Entrada: { ru_id, nivel_fila, latitude, longitude }
+        Saída (201): { id, nivel_fila, criado_em, valido_ate }
+        Erros: 403 se GPS não confirma presença no campus
+    validations:
+      required: false
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - Frontend
+        - Backend
+        - Banco de Dados
+        - Transversal / Infra
+    validations:
+      required: true
+
+  - type: dropdown
+    id: prioridade
+    attributes:
+      label: Prioridade
+      options:
+        - Alta
+        - Média
+        - Baixa
+    validations:
+      required: true
+
+  - type: input
+    id: sprint
+    attributes:
+      label: Sprint
+      placeholder: "Ex: Sprint 2"
+    validations:
+      required: false

@@ -1,0 +1,52 @@
+name: "🔧 Tarefa"
+description: Trabalho técnico que não é uma história de usuário nem um bug (setup, infra, configuração, documentação).
+title: "[TAREFA] "
+labels: ["tarefa"]
+body:
+  - type: textarea
+    id: descricao
+    attributes:
+      label: O que precisa ser feito?
+      description: Descreva a tarefa de forma objetiva.
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivo
+    attributes:
+      label: Por quê?
+      description: Contexto — por que essa tarefa é necessária agora.
+    validations:
+      required: false
+
+  - type: textarea
+    id: criterios-conclusao
+    attributes:
+      label: Como saber que está pronta
+      placeholder: |
+        - [ ] Item 1
+        - [ ] Item 2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - Frontend
+        - Backend
+        - Banco de Dados
+        - Infra / DevOps
+        - Documentação
+        - Processo / Organização
+    validations:
+      required: true
+
+  - type: input
+    id: sprint
+    attributes:
+      label: Sprint
+      placeholder: "Ex: Sprint 0"
+    validations:
+      required: false

@@ -1,0 +1,51 @@
+name: "🐛 Bug"
+description: Algo não está funcionando como deveria.
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: descricao
+    attributes:
+      label: O que aconteceu?
+      description: Descreva o comportamento incorreto.
+    validations:
+      required: true
+
+  - type: textarea
+    id: passos
+    attributes:
+      label: Como reproduzir
+      description: Passo a passo pra chegar no erro.
+      placeholder: |
+        1. Acesse a tela de...
+        2. Clique em...
+        3. Erro aparece
+    validations:
+      required: true
+
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Comportamento esperado
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área afetada
+      options:
+        - Frontend
+        - Backend
+        - Banco de Dados
+        - Infra / PWA
+    validations:
+      required: true
+
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto adicional
+      description: Prints, logs, navegador/dispositivo usado, etc.
+    validations:
+      required: false

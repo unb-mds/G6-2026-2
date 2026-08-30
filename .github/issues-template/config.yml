@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Dúvida de organização/processo
+    url: https://github.com/SEU_ORG/SEU_REPO/discussions
+    about: Para dúvidas sobre Scrum, sprint ou processo — não é uma história nem um bug.
